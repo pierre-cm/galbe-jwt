@@ -1,0 +1,29 @@
+{
+  "name": "galbe-jwt",
+  "version": "1.0.0",
+  "description": "JWT plugin for Galbe",
+  "module": "index.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierre-cm/galbe-jwt"
+  },
+  "homepage": "https://galbe.dev/plugins/jwt",
+  "keywords": [
+    "galbe",
+    "plugin",
+    "jwt",
+    "auth"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "galbe": "*"
+  },
+  "dependencies": {
+    "jose": "^5.4.0"
+  }
+}
