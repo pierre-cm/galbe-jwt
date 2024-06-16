@@ -1,5 +1,7 @@
 # Galbe JWT Plugin
 
+JWT plugin for [Galbe](https://galbe.dev/) framework.
+
 # Install
 
 ```bash
@@ -11,9 +13,10 @@ bun add galbe-jwt
 ## Example
 
 ```ts
-import { plugin, hook } from "galbe-jwt"
-import spki from "../res/public_key.pem" with {type:"text"}
 import { Galbe } from "galbe"
+import { plugin, hook } from "galbe-jwt"
+import { importSPKI } from "jose"
+import spki from "../res/public_key.pem" with {type:"text"}
 
 const galbe = new Galbe()
 const jwt = hook({
@@ -31,8 +34,6 @@ galbe.get("/test", [jwt()], ctx => {
 
 export default galbe
 ```
-
-In this example, the `GET /test` endpoint will require an
 
 ## Hook config
 
