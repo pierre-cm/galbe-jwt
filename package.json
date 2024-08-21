@@ -1,6 +1,6 @@
 {
   "name": "galbe-jwt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JWT plugin for Galbe",
   "module": "index.ts",
   "type": "module",
