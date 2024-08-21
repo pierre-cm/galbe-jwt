@@ -76,7 +76,7 @@ export const plugin = {
     )
     walkRoutes(galbe.router.routes, (route) => {
       let meta = metaRoutes?.[route.path]?.[route.method]
-      if (hookInstances.has(route.hooks?.[0])) {
+      if (route.hooks?.some((h) => hookInstances.has(h))) {
         if (!route.schema.headers) route.schema.headers = {}
         let headerKeys = Object.keys(route.schema.headers).filter((h) =>
           h.match(/authorization/i)
